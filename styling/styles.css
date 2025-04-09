@@ -1,6 +1,6 @@
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(-45deg, #FFD1A4, #A4E4C3, #FFC3A0, #B2E4C0);
+  font-family: 'Lexend', sans-serif;
+  background-image: linear-gradient( 108.4deg, rgba(220,194,255,1) 6.9%, rgba(185,223,248,1) 86.5% );
   background-size: 400% 400%;
   animation: gradientAnimation 10s ease infinite;
   margin: 0;
@@ -13,7 +13,7 @@ body {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-/* Responsive design for smaller screens */
+
 @media (max-width: 768px) {
   body {
     padding: 10px;
@@ -32,22 +32,15 @@ body {
 .container {
   max-width: 800px;
   margin: auto;
-  /* background-color: rgba(255, 255, 255, 0.8); Light transparency */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-h1, h2 {
-  text-align: center;
-  color: #FF5733; /* Deep peach for contrast */
 }
 
 .section {
   margin-bottom: 20px;
   padding: 15px;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.6); /*Softer transparency */ 
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 table {
@@ -58,13 +51,9 @@ table {
 
 th, td {
   padding: 10px;
-  text-align: left;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
+  text-align: center;
+  border: 1px solid #ddd;
 
-th {
-  background-color: #FFA07A; /* Peach headers */
-  color: black;
 }
 
 .special-notes {
@@ -72,3 +61,27 @@ th {
   padding: 15px;
   border-radius: 8px;
 }
+.gradient-text {
+  background: linear-gradient(108.4deg, rgba(175,132,255,1) 6.9%, rgba(105,192,255,1) 86.5%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-text {
+  background-size: 200% 200%;
+  animation: gradientMove 5s ease infinite;
+}
+
+
